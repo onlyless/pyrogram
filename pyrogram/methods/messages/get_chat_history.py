@@ -34,7 +34,7 @@ async def get_chunk(
     reverse: bool = False
 ):
     from_message_id = from_message_id or (1 if reverse else 0)
-	messages = await utils.parse_messages(
+    messages = await utils.parse_messages(
             client,
             await client.invoke(
                 raw.functions.messages.GetHistory(
