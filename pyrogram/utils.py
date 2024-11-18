@@ -240,6 +240,8 @@ def get_peer_type(peer_id: int) -> str:
 
         if MIN_CHANNEL_ID <= peer_id < MAX_CHANNEL_ID:
             return "channel"
+        if str(peer_id).startswith('-100'):
+            return "channel"
     elif 0 < peer_id <= MAX_USER_ID:
         return "user"
 
